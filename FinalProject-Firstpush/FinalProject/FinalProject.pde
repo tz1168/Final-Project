@@ -31,7 +31,7 @@ background(backColor);
 }
 void loadimages(){ //to clean things tidy
  a= loadImage("startpage.jpg"); //the starting page
- b= loadImage("2.png");// empty pot
+ b= loadImage("firstpage.png");// empty pot
  c= loadImage("with_noodles.png"); // pot with noodles
 // d=
 // e=
@@ -58,9 +58,10 @@ void draw() {
     info(); 
  } 
  
- else if(millis() > 180000) 
+ else if(millis() > 1800) //finish in 3 mintues or the game will end because you overcooked the ramen
      {
        image(z, width/2, height/2);
+       saveFrame("your_ramen.png"); //make a frameshot of your final outcome
      }
 }
 
