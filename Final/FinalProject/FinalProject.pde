@@ -39,7 +39,7 @@ int scene_start=0; //scene start at 0
 int currentScene=scene_start; //start at first scene
 
 long timer=0; //a timer
-int duration=60; //3 minutes
+int duration=60; //one mintue
 int time=60;
 int begin;
 
@@ -63,6 +63,7 @@ background(backColor);
   
    begin= millis(); //timer
    backGround();
+     
    
 bTurnon= new GButton(this, 700, 700, 100, 20, "On");//a button says on
 bTurnoff= new GButton(this, 800, 700, 100, 20, "Off"); // a button says off
@@ -76,9 +77,7 @@ slider1 = new GSlider(this, 700, 730, 200, 20, 10);
   deadSteam= new ArrayList(100);
   frameRate(30);
    
-   if(millis() > 60000) {
-       image(z, width/2, height/2);
-     }
+
   
 }
 void loadimages(){ //to clean things tidy
@@ -241,7 +240,9 @@ void time(){
     fill(0, 200, 153);
     textSize(30);
     text(time, 920, 100);
-
+if(millis() > 67000) {
+       image(z, width/2, height/2);
+     }
   }
 
 
